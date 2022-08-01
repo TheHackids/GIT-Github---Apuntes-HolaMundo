@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TheHackids-apuntes-git-&-github</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet"
+      media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet"
+      media="screen,projection" />
+    <link href="css/style-apuntes.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="Apuntes-GIT.html" class="brand-logo">
+          <img class="responsive-img" src="imagenes/TheHackids.png"
+            style="margin-top: 5px;"></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="https://git-scm.com/" target="_blank">Git</a></li>
+          <li><a href="https://github.com/" target="_blank">Github</a></li>
+          <li><a href="https://code.visualstudio.com/" target="_blank">Visual
+              Studio Code</a></li>
+          <li><a href="https://www.linkedin.com/in/ector-rivadeneyra/"
+              target="_blank">LinkedIn TheHackids</a></li>
+        </ul>
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
+            class="material-icons">menu</i></a>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <div class="centrar-imagen">
+        <a href="Apuntes-GIT.html"><img id="imagen-home-mobile"
+            src="imagenes/Home.png"
+            alt="home"></a>
+      </div>
+      <hr>
+      <br>
+      <li><a href="https://git-scm.com/" target="_blank">Git</a></li>
+      <li><a href="https://github.com/" target="_blank">Github</a></li>
+      <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio
+          Code</a></li>
+      <li><a href="https://www.linkedin.com/in/ector-rivadeneyra/"
+          target="_blank">LinkedIn TheHackids</a></li>
+    </ul>
+    <!--BANNER THEHACKIDS -->
+    <div class="video-banner">
+      <video class="responsive-video" style="width: 700px; height: 350px;"
+        autoplay muted>
+        <source src="imagenes/BANNER 2.1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <hr>
+    <br>
+    <!--CONTENIDO-->
+    <!--PRIMERA FILA-->
+    <div class="row">
+      <div class="col s7 push-s5"><span class="flow-text">
+          <h4><strong>¿Qué es GIT?</strong></h4>
+          <p>Es un sistema de versiones, nos permite tener un historial
+            completo de todo el código que hemos desarrollado para nuestra
+            página web o aplicación.
+          </p>
+          <p>Por ejemplo:</p>
+          <p id="caso-uno"></p>
+          <a class="waves-effect waves-light btn-small"
+            type="button"
+            onclick="document.getElementById('caso-uno').innerHTML=
+            'Tenemos la versión 1.1 - 1.2 - 1.3'">Haz click para ver el ejemplo</a>
+          <h4><strong>Ventajas de GIT</strong></h4>
+          <ul>
+            <li>Historial</li>
+            <li>Almacenar código</li>
+            <li>Trabajar en equipo</li>
+            <li>Conocer cuando se introdujo un error</li>
+          </ul>
+        </span>
+        <span class="flow-text">
+          <h4><strong>Herramientas gráficas</strong></h4>
+          <ul>
+            <li>Fork</li>
+            <li>Sourcetree</li>
+            <li>GitKraken</li>
+            <li>Github</li>
+          </ul>
+        </span></div>
+      <div class="col s5 pull-s7">
+        <img class="responsive-img" src="imagenes/Logos empresas/GIT.png">
+      </div>
+    </div>
+    <br>
+  <!--SEGUNDA FILA-->
+  <div class="centrar-texto">
+    <div class="row">
+      <div class="col s12"><span class="flow-text">
+          <h5><strong>¿Sabes cuál es la herramienta gráfica más popular de
+              GIT?</strong></h5>
+        </div>
+        <br>
+        <span class="flow-text">
+          <a class="waves-effect waves-light btn-small"
+            type="button"
+            onclick="descubreLaHerramienta()">¿Cuál será?</a>
+        </span>
+      </div>
+      <!--PARALLAX-->
+      <div id="herramienta-popular"
+        style="display:none">
+        <div class="parallax-container">
+          <div class="parallax">
+            <img src="imagenes/Logos empresas/github.jpg" width="700px">
+          </div>
+        </div>
+      </div>
+      </div>
+      <br>
+      <br>
+  <!--TERCERA FILA-->
+  <div class="row">
+    <div class="col s7 push-s5"><span class="flow-text">
+        <h4><strong>GIT BASH</strong></h4>
+        <p>BASH quiere decir Bourne-Again Shell y nos permite
+          ejecutar los comandos de GIT y también emular los comandos
+          de Linux y Mac. 
+        </p>
+        <p>¿Qué recomiendan los expertos de Windows?</p>
+        <p id="caso-dos"></p>
+        <a class="waves-effect waves-light btn-small"
+          type="button"
+          onclick="document.getElementById('caso-dos').innerHTML=
+          'No usar la terminal de Windows, usar GIT BASH'">Haz click para ver la recomendación</a>
+          <p id="caso-dos"></p>
+          </span>
+          </div>
+          <div class="col s5 pull-s7">
+            <img class="responsive-img" src="http://joshualoong.com/2018/10/22/Custom-Git-Commands-Making-Git-Status-Size/example.gif">
+          </div>
+          </div>
+  <br>
+
+        <!--  Scripts-->
+        <!--Necesita de jquery-2.1.1.min.js y de init para que funcione el navbar-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/funciones-apuntes.js"></script>
+
+      </body>
+    </html>

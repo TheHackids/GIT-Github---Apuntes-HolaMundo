@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Git</h1>
+    <p>Sistema de control de versiones</p>
+    <p>Me permite tener un historial completo
+       de todo el código que hemos desarrollado
+       para nuestra aplicación (1.0; 1.1; 1.2; etc)
+    </p>
+    <p>Trabaja de manera descentralizada</p>
+    <h2>Usos de GIT</h2>
+    <ul>
+        <li>Historial</li>
+        <li>Almacenar código</li>
+        <li>Trabajar en equipo</li>
+        <li>Cuando se introdujo un error</li>
+    </ul>
+    <h2>Herramientas gráficas</h2>
+    <ul>
+        <li>Sourcetree</li>
+        <li>GitKraken</li>
+        <li>Github</li>
+    </ul>
+    <h2>Git BASH</h2>
+    <p>BASH quiere decir Bourne-Again Shell</p>
+    <p>Me permite ejecutar los comando de GIT y también emulara
+       los comandos de LINUX y MAC
+    </p>
+    <h3>NO UTILICES LA TERMINAL DE WINDOWS, USA GIT BASH</h3>
+
+    <h2>Configuración de GIT</h2>
+    <h3>Comandos de configuración después de git config --global</h3>
+    <ul>
+        <li><strong>user.name</strong> para usuario</li>
+        <li><strong>user.email</strong> para correo electrónico</li>
+        <li><strong>core.editor "code --wait"</strong> para nuestro editor de código</li>
+        <li><strong>-e</strong> presenta nuestros datos en el editor de código</li>
+        <li><strong>core.autocrlf</strong> para windows es true</li>
+    </ul>
+
+
+    <h2>Rollback</h2>
+    <p>Volver de una versión con error a una versión anterior sin error</p>
+    <p>Por ejemplo</p>
+    <p>Pasar de 1.1 con error a 1.0 sin error</p>
+    <p>Pequeña introducción a la terminal</p>
+    <p>Podras almacenar tu código en la nube de manera gratuita</p>
+    <h2>Core.autocrlf</h2>
+    <p>En windows cada vez que agregamos un salto
+       de linea, agrega dos caracteres:</p>
+       <ul>
+        <li>Carriage Return (CR)</li>
+        <li>Line Feed (LF)</li>
+       </ul>
+    <p>Si trabajas en LINUX/MAC, solo se agrega line feed (LF)</p>
+    <p>Por lo tango, el usuario de WINDOWS va a tener que eliminar
+       el CR de su código si quiere subir su código y si quiere descargar
+       tendrá que agregar el caracter CR, para ello, Core.autocrlf tiene
+       que tener un valor de <strong>true</strong>
+    </p>
+    <p>Puede pasar que un usuario de LINUX/MAC por el editor de código
+       que utilice o manualmente, agregue el caracter CR, en ese caso, la
+       propiedad autocrlf debe contener <strong>input</strong>
+    </p>
+
+    <h2>Comandos</h2>
+    <ul>
+        <li><strong>ls</strong> nos permite listar todos los archivos y carpetas
+        de un directorio</li>  
+        <li><strong>pwd</strong> me indica en que directorio estoy</li>
+        <li><strong>cd</strong> sirve para ir a cualquier carpeta</li>
+        <li><strong>cd ..</strong> es para salir del directorio y 
+        nos manda a uno más arriba en la jerarquía</li>
+        <li><strong>mkdir</strong> se utiliza para crear un directorio</li>
+        <li><strong>git init</strong> crea un repositorio en GIT, para 
+        poder gestionar el proyecto</li>
+        <li><strong>ls -a</strong> nos permite visulizar el respositorio
+        que se ha creado con formato <strong>.git</strong></li>
+        <li><strong>code .</strong> nos permite abrir el repositorio
+        en nuestro editor de código favorito (VISUAL STUDIO CODE para mí)</li>
+        <li><strong>git status</strong> es para ver el estado de nuestro
+        repositorio</li>
+        <li><strong>git add</strong> sirve para añadir archivos al repositorio, NO USES EL PUNTO</li>
+        <li><strong>git commit -m ""</strong> me permite comprometer los nuevos
+        archivos, es decir, darle luz verde a la actualización</li>
+        <li><strong>rm</strong> se utiliza para eliminar un archivo en la etapa computador,
+        para luego cargarlo a la etapa de stage</li>
+        <li><strong>git rm</strong> sirve para eliminar un archivo y colocarlo
+        directamente en la etapa de commit</li>
+        <li><strong>git restore --staged</strong> regresa un archivo de commit a la fase de stage</li>
+        <li><strong>git restore</strong> es para recuperar un archivo de la fase stage al computador</li>
+        <li><strong>mv nombreOriginal nombreFinal</strong> sirve para cambiar el nombre de un archivo y
+        llevarlo a la fase stage</li>
+        <li><strong>git mv nombreOriginal nombreFinal</strong> se utiliza para cambiar el nombre
+        y enviarlo directamente a la fase de commit</li>
+        <li><strong>git diff</strong> Nos muestra los cambios del archivo a detalle</li>
+        <li><strong>git diff --staged</strong> Muestra todos los cambios que se encuentren
+        en la etapa de stage</li> 
+        <li><strong>git log</strong> Muestra a detalle los commits realizados</li>
+        <li><strong>git log --oneline</strong> Muestra un resumen de los commits realizados</li>
+        <li><strong>cat nombreDelArchivo</strong> Nos muestra el contenido del documento</li>
+          
+
+
+    </ul>
+
+    <h2>Detalle de implementación</h2>
+    <p>Es la información que aparece al nosotros estar dentro del
+       repositorio .git y ejecutar el comando ls -a ahí se almacenará
+       todas las versiones, las distintas ramas, los commits, todo
+    </p>
+
+    <h2>Flujo de trabajo</h2>
+    <h3>Computador</h3>
+    <img src="https://cdn-icons-png.flaticon.com/512/626/626013.png" alt="flecha-abajo" width="100 px" height="100 px">
+    <h3>Stage</h3>
+    <img src="https://cdn-icons-png.flaticon.com/512/626/626013.png" alt="flecha-abajo" width="100 px" height="100 px">
+    <h3>Commit</h3>
+    <img src="https://cdn-icons-png.flaticon.com/512/626/626013.png" alt="flecha-abajo" width="100 px" height="100 px">
+    <h3>Server</h3>
+
+    <h2>Untracked files</h2>
+    <p>Son archivos que GIT no está siguiendo, no sigue todos los documentos
+       por lo general
+    </p>
+
+    <h2>.env</h2>
+    <p>Nombre estandar para variables de entorno</p> 
+
+    <h2>Ignorar documentos</h2>
+    <p>Se debe crear el documento <strong>.gitignore</strong> y colocar los
+    documentos que desees ignorar, dentro de este y luego hacer commit a 
+    .gitignore </p>
+
+    <h2>Ramas o branches</h2>
+    <p>Antes que nada, debes saber en que rama nos encontramos</p>
+    <p>Usamos el comando <strong>git branch</strong> para saber nuestra rama</p>
+    <p>Para crear una rama usamos <strong>git checkout -b nombreDeLaRama</strong></p>
+    <p>Para traer las modificaciones de una rama a otra usamos <strong>git merge nombreDeLaRama</strong></p>
+
+    <h2>Tips para GITHUB</h2>
+    <p>Copiar el link de git remote bla bla bla 😂</p>
+    <p>Al copiar el git push -u origin main, cambiar el main por <strong>master</strong> si eres
+       de Windows</p>
+    <p>Si ya está todo eso, la siguiente solo agregas con <strong>git push</strong></p>
+</body>
+</html>
